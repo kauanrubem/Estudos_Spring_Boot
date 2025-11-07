@@ -36,7 +36,7 @@ public class Product {
     private Set<Category> categories = new HashSet<>();
 
     @OneToMany(mappedBy = "id.product")
-    private Set<OrderItem> Items = new HashSet<>();
+    private final Set<OrderItem> Items = new HashSet<>();
     
     public Product() {
     }
