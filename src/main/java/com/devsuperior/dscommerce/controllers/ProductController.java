@@ -1,10 +1,9 @@
 package com.devsuperior.dscommerce.controllers;
 
-import org.springframework.data.domain.Page;
-
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,7 +31,7 @@ public class ProductController {
         ProductDTO dto = service.findById(id);
         return ResponseEntity.ok(dto);
     }
-
+    
     @GetMapping
     public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable) {
         Page<ProductDTO> dto = service.findAll(pageable);
